@@ -40,7 +40,23 @@ namespace game_piece_freeze
         }
         static void Main(string[] args)
         {
-            
+            var gamePiece = new GamePiece();
+            gamePiece.Name = "Queen";
+            gamePiece.Color = "Black";
+
+            Console.WriteLine($"The {gamePiece.Name} is at X = {gamePiece.PositionX}, Y = {gamePiece.PositionY}.");
+
+            gamePiece.Move(10,8);
+
+            Console.WriteLine($"The {gamePiece.Name} is at X = {gamePiece.PositionX}, Y = {gamePiece.PositionY}.");
+
+            gamePiece.Freeze();
+            gamePiece.Move(5,4);
+            Console.WriteLine($"The {gamePiece.Name} is at X = {gamePiece.PositionX}, Y = {gamePiece.PositionY}.");
+
+            gamePiece.Unfreeze();
+            gamePiece.Move(5,4);
+            Console.WriteLine($"The {gamePiece.Name} is at X = {gamePiece.PositionX}, Y = {gamePiece.PositionY}.");
         }
     }
 }
